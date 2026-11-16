@@ -53,3 +53,23 @@ CodeCoverage/
 TestResult.xml
 nunit-*.xml
 *.vsidx
+
+# IDE files
+.vs/
+*.user
+*.suo
+
+# Local data: the database, stored photos, face data and logs describe real people
+*.mdf
+*.ldf
+**/DataBaseFiles/ProfilePictures/*
+**/DataBaseFiles/embeddings/*
+**/DataBaseFiles/notes/*
+**/Logger/*.txt
+**/Logger/profilePhotos/
+
+# Model files are downloaded separately (see README)
+*.dat
+
+# Keep the empty folders the program expects
+!.gitkeep

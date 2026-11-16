@@ -14,9 +14,11 @@ namespace FaceRecognitionServer
         /// <param name="body">The body content of the email.</param>
         public static async Task SendEmailAsync(string recipientEmail, string subject, string body)
         {
-            // Sender Gmail credentials (should be moved to a secure location like environment variables or app config)
-            var senderEmail = "";
-            var appPassword = ""; // App-specific password for Gmail account
+            // Sender Gmail credentials are read from the environment, never stored in the code
+            var senderEmail = Environment.GetEnvironmentVariable("ATTENDANCE_SMTP_USER")
+                ?? throw new InvalidOperationException("Set the ATTENDANCE_SMTP_USER environment variable.");
+            var appPassword = Environment.GetEnvironmentVariable("ATTENDANCE_SMTP_APP_PASSWORD")
+                ?? throw new InvalidOperationException("Set the ATTENDANCE_SMTP_APP_PASSWORD environment variable.");
 
             // SMTP (Simple Mail Transfer Protocol) client setup:
             // - smtp.gmail.com is Gmail's SMTP server
