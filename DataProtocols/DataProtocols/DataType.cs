@@ -1,0 +1,33 @@
+﻿namespace DataProtocols
+{
+    public enum DataType
+    {
+        None,
+        AESKey,
+        RSAKey,
+        LogInData,
+        SignUpData,
+        LogInAnswer,
+        SignUpAnswer,
+        RecognizeAndLogFaceRequest,
+        FaceRecognitionResult,
+        UpdatePersonDataRequest,
+        UpdatePersonDataResponse,
+        ForgotPasswordCodeRequest,
+        ResetPasswordRequest,
+        ResetPasswordResponse,
+        EmailVerificationCodeRequest,
+        EmailVerificationCodeVerificationRequest,
+        EmailVerificationCodeVerificationResponse,
+        GetGalleryRequest,
+        GetGalleryResponse,
+        OperationResultResponse,
+        GetPersonAttendanceRequest,
+        GetPersonAttendanceResponse,
+        GetAllAttendanceRequest,
+        GetAllAttendanceResponse,
+        GetAdvancedPersonDataWithProfilePictureByIdRequest,
+        GetAdvancedPersonDataWithProfilePictureByIdResponse,
+        DisconnectMessage
+    }
+}
